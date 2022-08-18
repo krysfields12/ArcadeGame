@@ -1,0 +1,33 @@
+.categories {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 256px;
+  text-decoration: none;
+  font-family: "Dosis";
+  text-align: center;
+  width: 120px;
+  height: 50rem; 
+  
+}
+main {
+  display: flex;
+}
+a {
+  text-transform: capitalize;
+  margin-bottom: 1px;
+  background-color: #283618;
+  color: beige;
+  flex-grow: 1;
+  /* font-size: 50px;  why cant I change the font size  */
+}
+a:hover {
+  box-shadow:  9px 10px -2px orange;
+  border-bottom: 2px solid orange;
+}
+/* 
+.categories>a:hover{
+
+}
+.anchortag:hover{
+  box-shadow:  9px 10px -2px orange;
+} */

@@ -1,0 +1,70 @@
+.main-nav{
+    display: flex;
+}
+.sub-nav{
+    display: flex  ;
+}
+main{
+    background-color:#84a98c;
+    justify-content: space-between;
+}
+.full-width{
+    display: none;
+}
+.short-width{
+    display: flex;
+}
+@media(min-width:768px){
+.full-width{
+display: flex;
+justify-content: center;
+}
+.short-width{
+    display:none;
+}
+}
+
+.nav-list{
+  display: flex;
+  flex-direction: row;  
+}
+.nav-list>a{
+    padding: 10px;
+    border-right: 5px;
+}
+
+.nav-list li:last-of-type a{
+border-right: none;
+}
+.search-form{
+    display: flex;
+    flex-grow: 1;  
+}
+input{
+padding: 2px;
+border: none;
+border-bottom: #84a98c;
+flex-grow: 1;
+}
+button{
+padding: 2px;
+border: none;
+}
+.company-name{
+color: antiquewhite;
+background-color: #283618;
+font-family: 'Dosis';
+font-size: 30px;
+padding: 5px;
+
+}
+.credit-offer{
+background-color: red;
+color: antiquewhite;
+}
+
+.horizontal nav-list{
+    flex-grow: 1;
+
+letter-spacing: 10px;
+}
