@@ -10,38 +10,7 @@ console.log("Hello world");
 
 //Building the X Click
 
-//*Attempt 1
-//This is our initial state 
-// const gameState = {
-//     board:[
-//         [null,null,null],
-//         [null,null,null],
-//         [null,null,null]
-//     ],
-//       PlayerX: "X",
-//       PlayerO: "O",     
-// }
-// let firstTurn = gameState.PlayerX
-
-// // Our Id's
-// const board = document.getElementById("board")
-
-// //Creating X click
-// function xClick(){
-//     const createX = document.createElement(h2, PlayerX);
-//     for (let i=0; i < gameState.board.length; i++){
-//         const id = document.createElement ("id");
-//         createX.appendChild(id)
-// }
-// board.appendChild (createX)
-// console.log("our click works");
-// }
-
-// const cell = document.getElementsByClassName("cell")
-// cell.addEventListener ('click', xClick)
-
 // *Attempt 2
-
 //This is our initial state
 const gameState = {
     board:[
@@ -56,10 +25,14 @@ let firstPlayer = gameState.PlayerX
 
 //Elements
 const board = document.getElementById("board")
-const cell = document.getElementsByClassName("cell")
-
+const cells = document.getElementsByClassName("cell")
+console.log(cells);
 //Xclick function
-cell.addEventListener ('click', xClick)
+
+for (let i=0; i< cells.length;i++){
+    console.log(cells[i]);
+    cells [i].addEventListener ('click', xClick)  
+}
 
 function xClick (event){
     const target=event.target

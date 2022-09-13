@@ -37,9 +37,9 @@ h1 {
     padding-top: 10px;
   }
   
-  .playerX{
+  .playerX:before{
     content: "X";
   }
-.playerO{
+.playerO:before{
     content: "O";
 }
