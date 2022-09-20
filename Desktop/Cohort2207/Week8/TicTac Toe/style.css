@@ -51,8 +51,4 @@ h1 {
     background-color:#576490 ;
 }
 
-#players{
-  display: flex;
-  justify-content: center;
-  padding-bottom: 1rem;
-}
+

@@ -8,14 +8,11 @@ console.log("Hello world");
 //going to need to add an eventlistener. For everytime you click on the board
 // Will create winning options. Should be a total of 8. 3 vertical, 3 horizontal and 2 diagnol. How to implement this logic?
 
-
-//Building the X Click
-
 // *Attempt 2
 //This is our initial state
 const gameState = {
     board:[
-        [null,null,null],
+        ['O',null,null],
         [null,null,null],
         [null,null,null]
     ],
@@ -29,16 +26,16 @@ let runningGame= false
 const board = document.getElementById("board")
 const cells = document.getElementsByClassName("cell")
 
+//X click function
 //Create a for loop so it adds the event listener 
 for (let i=0; i< cells.length;i++){
     cells [i].addEventListener ('click', xClick)  
 }
 
-//X click function
-function xClick (event){
-    const target=event.target
-    if (target.className.length){
-        target.className='playerX'
+function xClick (xEvent){
+    const oTarget=xEvent.target
+    if (oTarget.className.length){
+        oTarget.className='playerX'
 } 
 console.log('our X click works');
 }
@@ -48,15 +45,15 @@ for (let i=0; i< cells.length;i++){
     cells [i].addEventListener ('click', oClick)  
 }
 
-function oClick (event){
-    const target=event.target
-    if (target.className.length){
-        target.className='playerO'
+function oClick (oEvent){
+    const oTarget=oEvent.target
+    if (oTarget.className.length){
+        oTarget.className='playerO'
 } 
 console.log('our O click works');
 }
 
-//*Winning conditions - Indexes
+//Winning conditions - Indexes
 
 const winningOptions = [
     [0,1,2],
